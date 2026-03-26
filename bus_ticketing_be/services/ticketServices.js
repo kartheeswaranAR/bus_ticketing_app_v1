@@ -29,7 +29,12 @@ exports.getClosedTickets = async () => {
 exports.updateTicket = async (seatNumber, data) => {
 	return await Ticket.findOneAndUpdate(
 		{ seatNumber },
-		{ user: data },
+		{
+			user: {
+				name: data.name,
+				email: data.email,
+			},
+		},
 		{ new: true },
 	);
 };
@@ -37,7 +42,11 @@ exports.updateTicket = async (seatNumber, data) => {
 exports.deleteTicket = async (seatNumber) => {
 	return await Ticket.findOneAndUpdate(
 		{ seatNumber },
-		{ status: "OPEN", user: null, bookedAt: null },
+		{
+			status: "OPEN",
+			user: null,
+			bookedAt: null,
+		},
 		{ new: true },
 	);
 };

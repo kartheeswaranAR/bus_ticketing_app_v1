@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+nav {
+  background: #222;
+  color: white;
+  padding: 10px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+input {
+  margin: 5px;
+  padding: 5px;
+}
