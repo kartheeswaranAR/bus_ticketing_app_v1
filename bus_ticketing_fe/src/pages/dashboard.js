@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../api";
-import { getBookings } from "../utils/storage";
+// import { getBookings } from "../utils/storage";
 
 export default function Dashboard() {
 	const [data, setData] = useState([]);

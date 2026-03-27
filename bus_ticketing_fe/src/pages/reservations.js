@@ -6,7 +6,7 @@ import { saveBooking } from "../utils/storage";
 export default function Reservation() {
 	const [seats, setSeats] = useState([]);
 	const [selected, setSelected] = useState(null);
-       const [loading, setLoading] = useState(false);
+       const [loading] = useState(false);
 	const [form, setForm] = useState({
 		firstName: "",
 		lastName: "",
@@ -102,10 +102,6 @@ export default function Reservation() {
 						onChange={(e) => setForm({ ...form, lastName: e.target.value })}
 					/>
 
-					<input
-						placeholder="Email"
-						onChange={(e) => setForm({ ...form, email: e.target.value })}
-					/>
 					<input
 						placeholder="Email"
 						onChange={(e) => setForm({ ...form, email: e.target.value })}
